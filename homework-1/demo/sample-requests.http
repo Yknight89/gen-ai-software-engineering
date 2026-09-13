@@ -1,0 +1,62 @@
+### Banking Transactions API — sample requests
+### Use with the VS Code "REST Client" extension. Server must be running on :3000.
+@base = http://localhost:3000
+
+### Create a transfer
+POST {{base}}/transactions
+Content-Type: application/json
+
+{
+  "fromAccount": "ACC-12345",
+  "toAccount": "ACC-67890",
+  "amount": 100.50,
+  "currency": "USD",
+  "type": "transfer"
+}
+
+### Create a deposit
+POST {{base}}/transactions
+Content-Type: application/json
+
+{
+  "toAccount": "ACC-12345",
+  "amount": 500,
+  "currency": "EUR",
+  "type": "deposit"
+}
+
+### Validation error (negative amount, bad currency, bad account) -> 400
+POST {{base}}/transactions
+Content-Type: application/json
+
+{
+  "fromAccount": "XX-1",
+  "toAccount": "ACC-67890",
+  "amount": -5,
+  "currency": "XYZ",
+  "type": "transfer"
+}
+
+### List all transactions
+GET {{base}}/transactions
+
+### Filter by account
+GET {{base}}/transactions?accountId=ACC-12345
+
+### Filter by type
+GET {{base}}/transactions?type=transfer
+
+### Filter by date range
+GET {{base}}/transactions?from=2026-01-01&to=2026-12-31
+
+### Get one transaction by id (replace the id)
+GET {{base}}/transactions/REPLACE-WITH-ID
+
+### Account balance
+GET {{base}}/accounts/ACC-12345/balance
+
+### Account summary (bonus)
+GET {{base}}/accounts/ACC-12345/summary
+
+### CSV export (bonus)
+GET {{base}}/transactions/export?format=csv
