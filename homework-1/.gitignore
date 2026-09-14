@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+
+# Environment / secrets
+.env
+*.local
+
+# Node (in case of mixed tooling)
+node_modules/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.log
