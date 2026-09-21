@@ -85,6 +85,28 @@ homework-1/
     └── screenshots/      # AI usage + API running screenshots
 ```
 
+### 🤖 AI Usage & Demo Screenshots
+
+**Building the API with AI (Claude / Cowork):**
+
+![AI tool usage](docs/screenshots/ai-usage.png)
+
+**API running (Uvicorn in the terminal):**
+
+![API running](docs/screenshots/terminal-running.png)
+
+**Successful transaction — POST /transactions → 201:**
+
+![Successful transaction](docs/screenshots/successful-trx.png)
+
+**Validation error — 400 with structured details:**
+
+![Validation error](docs/screenshots/error-validation.png)
+
+**Service index / root endpoint:**
+
+![Root endpoint](docs/screenshots/endpoint-root.png)
+
 <div align="center">
 
 *This project was completed as part of the AI-Assisted Development course.*
