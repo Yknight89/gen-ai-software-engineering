@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support Tickets — Console</title>
+<style>
+  :root{
+    --bg:#0f172a; --panel:#ffffff; --ink:#0f172a; --muted:#64748b; --line:#e2e8f0;
+    --brand:#2563eb; --brand-ink:#fff; --ok:#059669; --warn:#d97706; --danger:#dc2626;
+    --urgent:#dc2626; --high:#ea580c; --medium:#2563eb; --low:#64748b;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#f1f5f9}
+  header{background:var(--bg);color:#fff;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  header h1{font-size:18px;margin:0;font-weight:650}
+  header .api{font-size:12px;color:#94a3b8}
+  header input{font-size:12px;padding:4px 8px;border-radius:6px;border:1px solid #334155;background:#1e293b;color:#e2e8f0;width:210px}
+  .wrap{max-width:1100px;margin:0 auto;padding:20px}
+  .bar{display:flex;gap:10px;flex-wrap:wrap;align-items:end;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:16px}
+  .bar .grow{flex:1 1 auto}
+  label{display:block;font-size:12px;color:var(--muted);margin-bottom:3px;font-weight:600}
+  select,input[type=text],input[type=email],textarea{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:8px;font:inherit;background:#fff}
+  textarea{min-height:80px;resize:vertical}
+  button{cursor:pointer;border:0;border-radius:8px;padding:8px 14px;font:inherit;font-weight:600;background:var(--brand);color:var(--brand-ink)}
+  button.ghost{background:#eef2ff;color:var(--brand)}
+  button.sub{background:#f1f5f9;color:var(--ink)}
+  button.danger{background:#fee2e2;color:var(--danger)}
+  button:hover{filter:brightness(.97)}
+  .grid{display:grid;grid-template-columns:1fr;gap:12px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px}
+  .ticket{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .ticket h3{margin:0 0 4px;font-size:15px}
+  .meta{color:var(--muted);font-size:12px}
+  .pill{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;text-transform:capitalize}
+  .p-urgent{background:#fee2e2;color:var(--urgent)} .p-high{background:#ffedd5;color:var(--high)}
+  .p-medium{background:#dbeafe;color:var(--medium)} .p-low{background:#f1f5f9;color:var(--low)}
+  .tag{display:inline-block;background:#f1f5f9;color:#475569;border-radius:6px;padding:1px 7px;font-size:11px;margin:2px 2px 0 0}
+  .row-actions{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+  .toast{position:fixed;right:16px;bottom:16px;padding:12px 16px;border-radius:10px;color:#fff;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,.15);opacity:0;transform:translateY(8px);transition:.2s;z-index:50}
+  .toast.show{opacity:1;transform:none}
+  .toast.ok{background:var(--ok)} .toast.err{background:var(--danger)}
+  dialog{border:0;border-radius:14px;padding:0;max-width:560px;width:92%}
+  dialog::backdrop{background:rgba(15,23,42,.5)}
+  .dlg-h{padding:16px 18px;border-bottom:1px solid var(--line);font-weight:700;display:flex;justify-content:space-between;align-items:center}
+  .dlg-b{padding:18px;display:grid;gap:10px}
+  .dlg-f{padding:14px 18px;border-top:1px solid var(--line);display:flex;justify-content:flex-end;gap:8px}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .err{color:var(--danger);font-size:12px}
+  .muted{color:var(--muted)}
+  .count{font-size:13px;color:var(--muted);margin:0 0 10px}
+  .classbox{background:#f8fafc;border:1px dashed var(--line);border-radius:8px;padding:10px;font-size:13px;margin-top:8px}
+  @media(min-width:720px){ .grid{grid-template-columns:1fr 1fr} }
+</style>
+</head>
+<body>
+<header>
+  <h1>🎧 Support Tickets Console</h1>
+  <div>
+    <span class="api">API</span>
+    <input id="apiBase" value="http://localhost:8000" title="API base URL">
+  </div>
+</header>
+
+<div class="wrap">
+  <!-- Toolbar: filters + actions -->
+  <div class="bar">
+    <div>
+      <label>Category</label>
+      <select id="fCategory"><option value="">All</option></select>
+    </div>
+    <div>
+      <label>Priority</label>
+      <select id="fPriority"><option value="">All</option></select>
+    </div>
+    <div>
+      <label>Status</label>
+      <select id="fStatus"><option value="">All</option></select>
+    </div>
+    <div class="grow"></div>
+    <div class="row-actions">
+      <button class="sub" onclick="load()">Refresh</button>
+      <button class="ghost" onclick="openImport()">⬆ Import</button>
+      <button onclick="openCreate()">+ New ticket</button>
+    </div>
+  </div>
+
+  <p class="count" id="count">Loading…</p>
+  <div class="grid" id="list"></div>
+</div>
+
+<!-- Create / edit dialog -->
+<dialog id="editDlg">
+  <form method="dialog" onsubmit="return false">
+    <div class="dlg-h"><span id="editTitle">New ticket</span><button type="button" class="sub" onclick="editDlg.close()">✕</button></div>
+    <div class="dlg-b">
+      <div class="two">
+        <div><label>Customer ID *</label><input id="f_customer_id" type="text"></div>
+        <div><label>Customer email *</label><input id="f_customer_email" type="email"></div>
+      </div>
+      <div><label>Customer name *</label><input id="f_customer_name" type="text"></div>
+      <div><label>Subject * (1–200)</label><input id="f_subject" type="text" maxlength="200"></div>
+      <div><label>Description * (10–2000)</label><textarea id="f_description" maxlength="2000"></textarea></div>
+      <div class="two">
+        <div><label>Category</label><select id="f_category"></select></div>
+        <div><label>Priority</label><select id="f_priority"></select></div>
+      </div>
+      <div class="two">
+        <div><label>Status</label><select id="f_status"></select></div>
+        <div><label>Assigned to</label><input id="f_assigned_to" type="text" placeholder="agent id"></div>
+      </div>
+      <div><label>Tags (comma separated)</label><input id="f_tags" type="text" placeholder="login, vip"></div>
+      <label><input type="checkbox" id="f_autoclassify"> Auto-classify on create</label>
+      <div class="err" id="editErr"></div>
+    </div>
+    <div class="dlg-f">
+      <button class="sub" type="button" onclick="editDlg.close()">Cancel</button>
+      <button type="button" id="saveBtn" onclick="save()">Save</button>
+    </div>
+  </form>
+</dialog>
+
+<!-- Import dialog -->
+<dialog id="importDlg">
+  <div class="dlg-h"><span>Bulk import (CSV / JSON / XML)</span><button class="sub" onclick="importDlg.close()">✕</button></div>
+  <div class="dlg-b">
+    <input type="file" id="importFile" accept=".csv,.json,.xml">
+    <p class="muted">The format is detected from the file extension. Invalid rows are reported.</p>
+    <div class="err" id="importErr"></div>
+    <div class="classbox" id="importResult" style="display:none"></div>
+  </div>
+  <div class="dlg-f">
+    <button class="sub" onclick="importDlg.close()">Close</button>
+    <button onclick="doImport()">Import</button>
+  </div>
+</dialog>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const CATEGORIES=["account_access","technical_issue","billing_question","feature_request","bug_report","other"];
+const PRIORITIES=["urgent","high","medium","low"];
+const STATUSES=["new","in_progress","waiting_customer","resolved","closed"];
+let editingId=null;
+
+const api = () => document.getElementById('apiBase').value.replace(/\/+$/,'');
+const $ = id => document.getElementById(id);
+
+function fillSelect(el, values, withAll){
+  el.innerHTML = (withAll?'<option value="">All</option>':'') + values.map(v=>`<option value="${v}">${v.replace(/_/g,' ')}</option>`).join('');
+}
+function initSelects(){
+  fillSelect($('fCategory'),CATEGORIES,true); fillSelect($('fPriority'),PRIORITIES,true); fillSelect($('fStatus'),STATUSES,true);
+  fillSelect($('f_category'),CATEGORIES,false); fillSelect($('f_priority'),PRIORITIES,false); fillSelect($('f_status'),STATUSES,false);
+}
+function toast(msg, ok=true){
+  const t=$('toast'); t.textContent=msg; t.className='toast show '+(ok?'ok':'err');
+  setTimeout(()=>t.className='toast',2600);
+}
+
+async function load(){
+  const qs=new URLSearchParams();
+  if($('fCategory').value) qs.set('category',$('fCategory').value);
+  if($('fPriority').value) qs.set('priority',$('fPriority').value);
+  if($('fStatus').value) qs.set('status',$('fStatus').value);
+  try{
+    const r=await fetch(`${api()}/tickets?${qs}`);
+    const d=await r.json();
+    $('count').textContent=`${d.count} ticket(s)`;
+    $('list').innerHTML = d.tickets.map(renderCard).join('') || '<p class="muted">No tickets. Create one or import a file.</p>';
+  }catch(e){ $('count').textContent=''; $('list').innerHTML=`<p class="err">Cannot reach API at ${api()} — is the server running?</p>`; }
+}
+
+function renderCard(t){
+  const conf = t.classification_confidence!=null ? ` · conf ${t.classification_confidence}` : '';
+  const tags=(t.tags||[]).map(x=>`<span class="tag">${x}</span>`).join('');
+  return `<div class="card"><div class="ticket">
+    <div style="min-width:0">
+      <h3>${esc(t.subject)}</h3>
+      <div class="meta">${esc(t.customer_name)} &lt;${esc(t.customer_email)}&gt; · ${t.status.replace(/_/g,' ')}</div>
+      <div style="margin:6px 0"><span class="pill p-${t.priority}">${t.priority}</span>
+        <span class="tag">${t.category.replace(/_/g,' ')}${conf}</span></div>
+      <div>${tags}</div>
+    </div></div>
+    <div class="row-actions" style="margin-top:10px">
+      <button class="ghost" onclick='classify("${t.id}")'>⚡ Classify</button>
+      <button class="sub" onclick='editTicket(${JSON.stringify(JSON.stringify(t))})'>Edit</button>
+      <button class="danger" onclick='del("${t.id}")'>Delete</button>
+    </div></div>`;
+}
+function esc(s){return (s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+
+function openCreate(){
+  editingId=null; $('editTitle').textContent='New ticket'; $('editErr').textContent='';
+  ['customer_id','customer_email','customer_name','subject','description','assigned_to','tags'].forEach(k=>$('f_'+k).value='');
+  $('f_category').value='other'; $('f_priority').value='medium'; $('f_status').value='new'; $('f_autoclassify').checked=false;
+  $('editDlg').showModal();
+}
+function editTicket(js){
+  const t=JSON.parse(js); editingId=t.id; $('editTitle').textContent='Edit ticket'; $('editErr').textContent='';
+  $('f_customer_id').value=t.customer_id; $('f_customer_email').value=t.customer_email; $('f_customer_name').value=t.customer_name;
+  $('f_subject').value=t.subject; $('f_description').value=t.description; $('f_category').value=t.category;
+  $('f_priority').value=t.priority; $('f_status').value=t.status; $('f_assigned_to').value=t.assigned_to||'';
+  $('f_tags').value=(t.tags||[]).join(', '); $('f_autoclassify').checked=false;
+  $('editDlg').showModal();
+}
+
+function clientValidate(p){
+  const errs=[];
+  if(!p.customer_id) errs.push('Customer ID is required');
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(p.customer_email||'')) errs.push('Valid email is required');
+  if(!p.customer_name) errs.push('Customer name is required');
+  if(!p.subject||p.subject.length<1||p.subject.length>200) errs.push('Subject must be 1–200 chars');
+  if(!p.description||p.description.length<10||p.description.length>2000) errs.push('Description must be 10–2000 chars');
+  return errs;
+}
+
+async function save(){
+  const tags=$('f_tags').value.split(',').map(s=>s.trim()).filter(Boolean);
+  const p={customer_id:$('f_customer_id').value.trim(),customer_email:$('f_customer_email').value.trim(),
+    customer_name:$('f_customer_name').value.trim(),subject:$('f_subject').value.trim(),
+    description:$('f_description').value.trim(),category:$('f_category').value,priority:$('f_priority').value,
+    status:$('f_status').value,assigned_to:$('f_assigned_to').value.trim()||null,tags};
+  const errs=clientValidate(p);
+  if(errs.length){ $('editErr').textContent=errs.join(' · '); return; }
+  try{
+    let url,method;
+    if(editingId){ url=`${api()}/tickets/${editingId}`; method='PUT'; }
+    else { url=`${api()}/tickets${$('f_autoclassify').checked?'?auto_classify=true':''}`; method='POST'; }
+    const r=await fetch(url,{method,headers:{'Content-Type':'application/json'},body:JSON.stringify(p)});
+    const d=await r.json();
+    if(!r.ok){ $('editErr').textContent=(d.details||[]).map(e=>`${e.field}: ${e.message}`).join(' · ')||d.message||'Error'; return; }
+    $('editDlg').close(); toast(editingId?'Ticket updated':'Ticket created'); load();
+  }catch(e){ $('editErr').textContent='Network error — is the API running?'; }
+}
+
+async function del(id){
+  if(!confirm('Delete this ticket?')) return;
+  try{ const r=await fetch(`${api()}/tickets/${id}`,{method:'DELETE'}); if(r.ok){toast('Deleted');load();} else toast('Delete failed',false);}catch(e){toast('Network error',false);}
+}
+
+async function classify(id){
+  try{
+    const r=await fetch(`${api()}/tickets/${id}/auto-classify`,{method:'POST'});
+    const d=await r.json();
+    if(!r.ok){toast(d.message||'Failed',false);return;}
+    toast(`Classified: ${d.category} / ${d.priority} (conf ${d.confidence})`);
+    load();
+  }catch(e){toast('Network error',false);}
+}
+
+function openImport(){ $('importErr').textContent=''; $('importResult').style.display='none'; $('importFile').value=''; $('importDlg').showModal(); }
+async function doImport(){
+  const f=$('importFile').files[0];
+  if(!f){ $('importErr').textContent='Choose a file first'; return; }
+  const fd=new FormData(); fd.append('file',f);
+  try{
+    const r=await fetch(`${api()}/tickets/import`,{method:'POST',body:fd});
+    const d=await r.json();
+    if(!r.ok){ $('importErr').textContent=(d.details||[]).map(e=>e.message).join(' · ')||'Import failed'; return; }
+    $('importErr').textContent='';
+    const box=$('importResult'); box.style.display='block';
+    box.innerHTML=`<b>Imported.</b> total ${d.total} · <span style="color:var(--ok)">✔ ${d.successful}</span> · <span style="color:var(--danger)">✘ ${d.failed_count}</span>`
+      + (d.failed_count?`<br><span class="muted">First error: row ${d.failed[0].row} — ${d.failed[0].errors.map(e=>e.field+': '+e.message).join(', ')}</span>`:'');
+    toast(`Imported ${d.successful}/${d.total}`);
+    load();
+  }catch(e){ $('importErr').textContent='Network error — is the API running?'; }
+}
+
+['fCategory','fPriority','fStatus'].forEach(id=>document.addEventListener('DOMContentLoaded',()=>$(id).addEventListener('change',load)));
+$('apiBase').addEventListener('change',load);
+initSelects(); load();
+</script>
+</body>
+</html>

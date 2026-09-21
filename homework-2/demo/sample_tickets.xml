@@ -1,0 +1,505 @@
+<?xml version="1.0" ?>
+<tickets>
+  <ticket>
+    <customer_id>CUST-1200</customer_id>
+    <customer_email>kim.ng200@example.com</customer_email>
+    <customer_name>Kim Ng</customer_name>
+    <subject>Page is very slow</subject>
+    <description>The application crashes with a 500 error and the dashboard is extremely slow to load.</description>
+    <category>technical_issue</category>
+    <priority>urgent</priority>
+    <status>in_progress</status>
+    <tags>
+      <tag>ui</tag>
+    </tags>
+    <metadata>
+      <source>phone</source>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1201</customer_id>
+    <customer_email>sam.vega201@example.com</customer_email>
+    <customer_name>Sam Vega</customer_name>
+    <subject>500 error on dashboard</subject>
+    <description>The application crashes with a 500 error and the dashboard is extremely slow to load.</description>
+    <category>technical_issue</category>
+    <priority>high</priority>
+    <status>new</status>
+    <tags>
+      <tag>refund</tag>
+      <tag>backend</tag>
+    </tags>
+    <metadata>
+      <source>web_form</source>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1202</customer_id>
+    <customer_email>tara.lee202@example.com</customer_email>
+    <customer_name>Tara Lee</customer_name>
+    <subject>Page is very slow</subject>
+    <description>The application crashes with a 500 error and the dashboard is extremely slow to load.</description>
+    <category>technical_issue</category>
+    <priority>urgent</priority>
+    <status>waiting_customer</status>
+    <tags>
+      <tag>vip</tag>
+      <tag>urgent</tag>
+    </tags>
+    <metadata>
+      <source>web_form</source>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1203</customer_id>
+    <customer_email>jo.doe203@example.com</customer_email>
+    <customer_name>Jo Doe</customer_name>
+    <subject>Feedback for the team</subject>
+    <description>I just had a general question about the product roadmap and wanted to share some feedback.</description>
+    <category>other</category>
+    <priority>low</priority>
+    <status>new</status>
+    <tags>
+      <tag>urgent</tag>
+    </tags>
+    <metadata>
+      <source>chat</source>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1204</customer_id>
+    <customer_email>mona.ng204@example.com</customer_email>
+    <customer_name>Mona Ng</customer_name>
+    <subject>Overcharged this month</subject>
+    <description>I was charged twice on my latest invoice and would like a refund for the extra payment.</description>
+    <category>billing_question</category>
+    <priority>medium</priority>
+    <status>closed</status>
+    <tags>
+      <tag>vip</tag>
+      <tag>refund</tag>
+    </tags>
+    <metadata>
+      <source>chat</source>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1205</customer_id>
+    <customer_email>hana.sun205@example.com</customer_email>
+    <customer_name>Hana Sun</customer_name>
+    <subject>Bug: totals are wrong</subject>
+    <description>Here are the steps to reproduce a clear defect: the totals are wrong, this looks like a bug.</description>
+    <category>bug_report</category>
+    <priority>urgent</priority>
+    <status>waiting_customer</status>
+    <tags>
+      <tag>backend</tag>
+    </tags>
+    <metadata>
+      <source>chat</source>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1206</customer_id>
+    <customer_email>leo.sun206@example.com</customer_email>
+    <customer_name>Leo Sun</customer_name>
+    <subject>Bug: totals are wrong</subject>
+    <description>Here are the steps to reproduce a clear defect: the totals are wrong, this looks like a bug.</description>
+    <category>bug_report</category>
+    <priority>low</priority>
+    <status>waiting_customer</status>
+    <tags/>
+    <metadata>
+      <source>chat</source>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1207</customer_id>
+    <customer_email>hana.sun207@example.com</customer_email>
+    <customer_name>Hana Sun</customer_name>
+    <subject>500 error on dashboard</subject>
+    <description>The application crashes with a 500 error and the dashboard is extremely slow to load.</description>
+    <category>technical_issue</category>
+    <priority>medium</priority>
+    <status>closed</status>
+    <tags/>
+    <metadata>
+      <source>phone</source>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1208</customer_id>
+    <customer_email>gil.vega208@example.com</customer_email>
+    <customer_name>Gil Vega</customer_name>
+    <subject>Password reset not working</subject>
+    <description>I cannot access my account after a password reset and I am locked out, this is blocking me.</description>
+    <category>account_access</category>
+    <priority>high</priority>
+    <status>resolved</status>
+    <tags>
+      <tag>refund</tag>
+      <tag>vip</tag>
+    </tags>
+    <metadata>
+      <source>chat</source>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1209</customer_id>
+    <customer_email>ivan.park209@example.com</customer_email>
+    <customer_name>Ivan Park</customer_name>
+    <subject>Password reset not working</subject>
+    <description>I cannot access my account after a password reset and I am locked out, this is blocking me.</description>
+    <category>account_access</category>
+    <priority>high</priority>
+    <status>waiting_customer</status>
+    <tags>
+      <tag>mobile</tag>
+      <tag>urgent</tag>
+    </tags>
+    <metadata>
+      <source>chat</source>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1210</customer_id>
+    <customer_email>kim.vega210@example.com</customer_email>
+    <customer_name>Kim Vega</customer_name>
+    <subject>Steps to reproduce a crash</subject>
+    <description>Here are the steps to reproduce a clear defect: the totals are wrong, this looks like a bug.</description>
+    <category>bug_report</category>
+    <priority>medium</priority>
+    <status>waiting_customer</status>
+    <tags>
+      <tag>vip</tag>
+      <tag>urgent</tag>
+    </tags>
+    <metadata>
+      <source>api</source>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1211</customer_id>
+    <customer_email>carl.park211@example.com</customer_email>
+    <customer_name>Carl Park</customer_name>
+    <subject>Invoice question</subject>
+    <description>I was charged twice on my latest invoice and would like a refund for the extra payment.</description>
+    <category>billing_question</category>
+    <priority>urgent</priority>
+    <status>closed</status>
+    <tags>
+      <tag>backend</tag>
+      <tag>refund</tag>
+    </tags>
+    <metadata>
+      <source>email</source>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1212</customer_id>
+    <customer_email>hana.cruz212@example.com</customer_email>
+    <customer_name>Hana Cruz</customer_name>
+    <subject>Suggestion for filters</subject>
+    <description>It would be a nice enhancement if you could please add this feature to improve the product.</description>
+    <category>feature_request</category>
+    <priority>medium</priority>
+    <status>new</status>
+    <tags/>
+    <metadata>
+      <source>api</source>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1213</customer_id>
+    <customer_email>ed.rao213@example.com</customer_email>
+    <customer_name>Ed Rao</customer_name>
+    <subject>App crashes on startup</subject>
+    <description>The application crashes with a 500 error and the dashboard is extremely slow to load.</description>
+    <category>technical_issue</category>
+    <priority>high</priority>
+    <status>waiting_customer</status>
+    <tags/>
+    <metadata>
+      <source>web_form</source>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1214</customer_id>
+    <customer_email>dana.wong214@example.com</customer_email>
+    <customer_name>Dana Wong</customer_name>
+    <subject>App crashes on startup</subject>
+    <description>The application crashes with a 500 error and the dashboard is extremely slow to load.</description>
+    <category>technical_issue</category>
+    <priority>urgent</priority>
+    <status>closed</status>
+    <tags>
+      <tag>vip</tag>
+    </tags>
+    <metadata>
+      <source>chat</source>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1215</customer_id>
+    <customer_email>ed.doe215@example.com</customer_email>
+    <customer_name>Ed Doe</customer_name>
+    <subject>500 error on dashboard</subject>
+    <description>The application crashes with a 500 error and the dashboard is extremely slow to load.</description>
+    <category>technical_issue</category>
+    <priority>low</priority>
+    <status>new</status>
+    <tags/>
+    <metadata>
+      <source>chat</source>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1216</customer_id>
+    <customer_email>sam.doe216@example.com</customer_email>
+    <customer_name>Sam Doe</customer_name>
+    <subject>Cannot log in to my account</subject>
+    <description>I cannot access my account after a password reset and I am locked out, this is blocking me.</description>
+    <category>account_access</category>
+    <priority>high</priority>
+    <status>closed</status>
+    <tags>
+      <tag>ui</tag>
+    </tags>
+    <metadata>
+      <source>email</source>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1217</customer_id>
+    <customer_email>mona.cruz217@example.com</customer_email>
+    <customer_name>Mona Cruz</customer_name>
+    <subject>Steps to reproduce a crash</subject>
+    <description>Here are the steps to reproduce a clear defect: the totals are wrong, this looks like a bug.</description>
+    <category>bug_report</category>
+    <priority>high</priority>
+    <status>closed</status>
+    <tags>
+      <tag>vip</tag>
+    </tags>
+    <metadata>
+      <source>chat</source>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1218</customer_id>
+    <customer_email>mona.rao218@example.com</customer_email>
+    <customer_name>Mona Rao</customer_name>
+    <subject>Steps to reproduce a crash</subject>
+    <description>Here are the steps to reproduce a clear defect: the totals are wrong, this looks like a bug.</description>
+    <category>bug_report</category>
+    <priority>urgent</priority>
+    <status>closed</status>
+    <tags>
+      <tag>ui</tag>
+      <tag>backend</tag>
+    </tags>
+    <metadata>
+      <source>email</source>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1219</customer_id>
+    <customer_email>ann.ng219@example.com</customer_email>
+    <customer_name>Ann Ng</customer_name>
+    <subject>General question</subject>
+    <description>I just had a general question about the product roadmap and wanted to share some feedback.</description>
+    <category>other</category>
+    <priority>high</priority>
+    <status>closed</status>
+    <tags/>
+    <metadata>
+      <source>email</source>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1220</customer_id>
+    <customer_email>ned.cruz220@example.com</customer_email>
+    <customer_name>Ned Cruz</customer_name>
+    <subject>Export to PDF idea</subject>
+    <description>It would be a nice enhancement if you could please add this feature to improve the product.</description>
+    <category>feature_request</category>
+    <priority>medium</priority>
+    <status>new</status>
+    <tags/>
+    <metadata>
+      <source>api</source>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1221</customer_id>
+    <customer_email>ned.lee221@example.com</customer_email>
+    <customer_name>Ned Lee</customer_name>
+    <subject>Page is very slow</subject>
+    <description>The application crashes with a 500 error and the dashboard is extremely slow to load.</description>
+    <category>technical_issue</category>
+    <priority>high</priority>
+    <status>waiting_customer</status>
+    <tags>
+      <tag>mobile</tag>
+      <tag>backend</tag>
+    </tags>
+    <metadata>
+      <source>chat</source>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1222</customer_id>
+    <customer_email>gil.ng222@example.com</customer_email>
+    <customer_name>Gil Ng</customer_name>
+    <subject>Defect in report export</subject>
+    <description>Here are the steps to reproduce a clear defect: the totals are wrong, this looks like a bug.</description>
+    <category>bug_report</category>
+    <priority>high</priority>
+    <status>new</status>
+    <tags/>
+    <metadata>
+      <source>email</source>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1223</customer_id>
+    <customer_email>sam.rao223@example.com</customer_email>
+    <customer_name>Sam Rao</customer_name>
+    <subject>Defect in report export</subject>
+    <description>Here are the steps to reproduce a clear defect: the totals are wrong, this looks like a bug.</description>
+    <category>bug_report</category>
+    <priority>urgent</priority>
+    <status>resolved</status>
+    <tags>
+      <tag>urgent</tag>
+      <tag>vip</tag>
+    </tags>
+    <metadata>
+      <source>api</source>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1224</customer_id>
+    <customer_email>ola.wong224@example.com</customer_email>
+    <customer_name>Ola Wong</customer_name>
+    <subject>Bug: totals are wrong</subject>
+    <description>Here are the steps to reproduce a clear defect: the totals are wrong, this looks like a bug.</description>
+    <category>bug_report</category>
+    <priority>urgent</priority>
+    <status>resolved</status>
+    <tags>
+      <tag>urgent</tag>
+      <tag>mobile</tag>
+    </tags>
+    <metadata>
+      <source>api</source>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1225</customer_id>
+    <customer_email>gil.cruz225@example.com</customer_email>
+    <customer_name>Gil Cruz</customer_name>
+    <subject>Locked out after 2FA</subject>
+    <description>I cannot access my account after a password reset and I am locked out, this is blocking me.</description>
+    <category>account_access</category>
+    <priority>urgent</priority>
+    <status>waiting_customer</status>
+    <tags>
+      <tag>ui</tag>
+      <tag>backend</tag>
+    </tags>
+    <metadata>
+      <source>chat</source>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1226</customer_id>
+    <customer_email>ned.rao226@example.com</customer_email>
+    <customer_name>Ned Rao</customer_name>
+    <subject>General question</subject>
+    <description>I just had a general question about the product roadmap and wanted to share some feedback.</description>
+    <category>other</category>
+    <priority>low</priority>
+    <status>resolved</status>
+    <tags/>
+    <metadata>
+      <source>chat</source>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1227</customer_id>
+    <customer_email>jo.sun227@example.com</customer_email>
+    <customer_name>Jo Sun</customer_name>
+    <subject>Suggestion for filters</subject>
+    <description>It would be a nice enhancement if you could please add this feature to improve the product.</description>
+    <category>feature_request</category>
+    <priority>urgent</priority>
+    <status>in_progress</status>
+    <tags>
+      <tag>vip</tag>
+    </tags>
+    <metadata>
+      <source>chat</source>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1228</customer_id>
+    <customer_email>leo.ali228@example.com</customer_email>
+    <customer_name>Leo Ali</customer_name>
+    <subject>General question</subject>
+    <description>I just had a general question about the product roadmap and wanted to share some feedback.</description>
+    <category>other</category>
+    <priority>low</priority>
+    <status>new</status>
+    <tags>
+      <tag>urgent</tag>
+    </tags>
+    <metadata>
+      <source>api</source>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1229</customer_id>
+    <customer_email>pia.doe229@example.com</customer_email>
+    <customer_name>Pia Doe</customer_name>
+    <subject>Suggestion for filters</subject>
+    <description>It would be a nice enhancement if you could please add this feature to improve the product.</description>
+    <category>feature_request</category>
+    <priority>low</priority>
+    <status>resolved</status>
+    <tags/>
+    <metadata>
+      <source>email</source>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+</tickets>
