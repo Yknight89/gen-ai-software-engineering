@@ -1,0 +1,336 @@
+[
+  {
+    "customer_id": "CUST-1100",
+    "customer_email": "carl.rao100@example.com",
+    "customer_name": "Carl Rao",
+    "subject": "Page is very slow",
+    "description": "The application crashes with a 500 error and the dashboard is extremely slow to load.",
+    "category": "technical_issue",
+    "priority": "medium",
+    "status": "resolved",
+    "tags": [
+      "vip"
+    ],
+    "metadata": {
+      "source": "api",
+      "device_type": "tablet"
+    }
+  },
+  {
+    "customer_id": "CUST-1101",
+    "customer_email": "fay.vega101@example.com",
+    "customer_name": "Fay Vega",
+    "subject": "Overcharged this month",
+    "description": "I was charged twice on my latest invoice and would like a refund for the extra payment.",
+    "category": "billing_question",
+    "priority": "low",
+    "status": "in_progress",
+    "tags": [
+      "mobile",
+      "urgent"
+    ],
+    "metadata": {
+      "source": "chat",
+      "device_type": "tablet"
+    }
+  },
+  {
+    "customer_id": "CUST-1102",
+    "customer_email": "ivan.rao102@example.com",
+    "customer_name": "Ivan Rao",
+    "subject": "Cannot log in to my account",
+    "description": "I cannot access my account after a password reset and I am locked out, this is blocking me.",
+    "category": "account_access",
+    "priority": "low",
+    "status": "closed",
+    "tags": [
+      "refund",
+      "urgent"
+    ],
+    "metadata": {
+      "source": "chat",
+      "device_type": "mobile"
+    }
+  },
+  {
+    "customer_id": "CUST-1103",
+    "customer_email": "fay.ali103@example.com",
+    "customer_name": "Fay Ali",
+    "subject": "Export to PDF idea",
+    "description": "It would be a nice enhancement if you could please add this feature to improve the product.",
+    "category": "feature_request",
+    "priority": "high",
+    "status": "new",
+    "tags": [
+      "mobile"
+    ],
+    "metadata": {
+      "source": "phone",
+      "device_type": "mobile"
+    }
+  },
+  {
+    "customer_id": "CUST-1104",
+    "customer_email": "gil.rao104@example.com",
+    "customer_name": "Gil Rao",
+    "subject": "Cannot log in to my account",
+    "description": "I cannot access my account after a password reset and I am locked out, this is blocking me.",
+    "category": "account_access",
+    "priority": "high",
+    "status": "in_progress",
+    "tags": [],
+    "metadata": {
+      "source": "web_form",
+      "device_type": "desktop"
+    }
+  },
+  {
+    "customer_id": "CUST-1105",
+    "customer_email": "tara.lee105@example.com",
+    "customer_name": "Tara Lee",
+    "subject": "Export to PDF idea",
+    "description": "It would be a nice enhancement if you could please add this feature to improve the product.",
+    "category": "feature_request",
+    "priority": "low",
+    "status": "closed",
+    "tags": [],
+    "metadata": {
+      "source": "chat",
+      "device_type": "mobile"
+    }
+  },
+  {
+    "customer_id": "CUST-1106",
+    "customer_email": "gil.ng106@example.com",
+    "customer_name": "Gil Ng",
+    "subject": "Suggestion for filters",
+    "description": "It would be a nice enhancement if you could please add this feature to improve the product.",
+    "category": "feature_request",
+    "priority": "urgent",
+    "status": "new",
+    "tags": [
+      "backend"
+    ],
+    "metadata": {
+      "source": "email",
+      "device_type": "tablet"
+    }
+  },
+  {
+    "customer_id": "CUST-1107",
+    "customer_email": "ned.doe107@example.com",
+    "customer_name": "Ned Doe",
+    "subject": "Steps to reproduce a crash",
+    "description": "Here are the steps to reproduce a clear defect: the totals are wrong, this looks like a bug.",
+    "category": "bug_report",
+    "priority": "high",
+    "status": "new",
+    "tags": [
+      "backend"
+    ],
+    "metadata": {
+      "source": "chat",
+      "device_type": "tablet"
+    }
+  },
+  {
+    "customer_id": "CUST-1108",
+    "customer_email": "ravi.cruz108@example.com",
+    "customer_name": "Ravi Cruz",
+    "subject": "Defect in report export",
+    "description": "Here are the steps to reproduce a clear defect: the totals are wrong, this looks like a bug.",
+    "category": "bug_report",
+    "priority": "low",
+    "status": "closed",
+    "tags": [
+      "mobile",
+      "vip"
+    ],
+    "metadata": {
+      "source": "phone",
+      "device_type": "mobile"
+    }
+  },
+  {
+    "customer_id": "CUST-1109",
+    "customer_email": "ola.wong109@example.com",
+    "customer_name": "Ola Wong",
+    "subject": "Invoice question",
+    "description": "I was charged twice on my latest invoice and would like a refund for the extra payment.",
+    "category": "billing_question",
+    "priority": "high",
+    "status": "waiting_customer",
+    "tags": [
+      "vip",
+      "backend"
+    ],
+    "metadata": {
+      "source": "api",
+      "device_type": "mobile"
+    }
+  },
+  {
+    "customer_id": "CUST-1110",
+    "customer_email": "ivan.park110@example.com",
+    "customer_name": "Ivan Park",
+    "subject": "Password reset not working",
+    "description": "I cannot access my account after a password reset and I am locked out, this is blocking me.",
+    "category": "account_access",
+    "priority": "medium",
+    "status": "waiting_customer",
+    "tags": [
+      "ui",
+      "backend"
+    ],
+    "metadata": {
+      "source": "email",
+      "device_type": "desktop"
+    }
+  },
+  {
+    "customer_id": "CUST-1111",
+    "customer_email": "dana.park111@example.com",
+    "customer_name": "Dana Park",
+    "subject": "Please add dark mode",
+    "description": "It would be a nice enhancement if you could please add this feature to improve the product.",
+    "category": "feature_request",
+    "priority": "low",
+    "status": "resolved",
+    "tags": [
+      "mobile"
+    ],
+    "metadata": {
+      "source": "chat",
+      "device_type": "mobile"
+    }
+  },
+  {
+    "customer_id": "CUST-1112",
+    "customer_email": "fay.vega112@example.com",
+    "customer_name": "Fay Vega",
+    "subject": "Password reset not working",
+    "description": "I cannot access my account after a password reset and I am locked out, this is blocking me.",
+    "category": "account_access",
+    "priority": "urgent",
+    "status": "closed",
+    "tags": [
+      "vip"
+    ],
+    "metadata": {
+      "source": "web_form",
+      "device_type": "mobile"
+    }
+  },
+  {
+    "customer_id": "CUST-1113",
+    "customer_email": "leo.vega113@example.com",
+    "customer_name": "Leo Vega",
+    "subject": "Page is very slow",
+    "description": "The application crashes with a 500 error and the dashboard is extremely slow to load.",
+    "category": "technical_issue",
+    "priority": "high",
+    "status": "resolved",
+    "tags": [],
+    "metadata": {
+      "source": "api",
+      "device_type": "mobile"
+    }
+  },
+  {
+    "customer_id": "CUST-1114",
+    "customer_email": "jane.vega114@example.com",
+    "customer_name": "Jane Vega",
+    "subject": "Export to PDF idea",
+    "description": "It would be a nice enhancement if you could please add this feature to improve the product.",
+    "category": "feature_request",
+    "priority": "low",
+    "status": "in_progress",
+    "tags": [
+      "backend"
+    ],
+    "metadata": {
+      "source": "phone",
+      "device_type": "tablet"
+    }
+  },
+  {
+    "customer_id": "CUST-1115",
+    "customer_email": "leo.cruz115@example.com",
+    "customer_name": "Leo Cruz",
+    "subject": "Locked out after 2FA",
+    "description": "I cannot access my account after a password reset and I am locked out, this is blocking me.",
+    "category": "account_access",
+    "priority": "urgent",
+    "status": "new",
+    "tags": [
+      "vip",
+      "backend"
+    ],
+    "metadata": {
+      "source": "chat",
+      "device_type": "desktop"
+    }
+  },
+  {
+    "customer_id": "CUST-1116",
+    "customer_email": "hana.vega116@example.com",
+    "customer_name": "Hana Vega",
+    "subject": "Password reset not working",
+    "description": "I cannot access my account after a password reset and I am locked out, this is blocking me.",
+    "category": "account_access",
+    "priority": "high",
+    "status": "resolved",
+    "tags": [
+      "urgent"
+    ],
+    "metadata": {
+      "source": "chat",
+      "device_type": "mobile"
+    }
+  },
+  {
+    "customer_id": "CUST-1117",
+    "customer_email": "hana.lee117@example.com",
+    "customer_name": "Hana Lee",
+    "subject": "Export to PDF idea",
+    "description": "It would be a nice enhancement if you could please add this feature to improve the product.",
+    "category": "feature_request",
+    "priority": "urgent",
+    "status": "closed",
+    "tags": [],
+    "metadata": {
+      "source": "api",
+      "device_type": "desktop"
+    }
+  },
+  {
+    "customer_id": "CUST-1118",
+    "customer_email": "ann.doe118@example.com",
+    "customer_name": "Ann Doe",
+    "subject": "General question",
+    "description": "I just had a general question about the product roadmap and wanted to share some feedback.",
+    "category": "other",
+    "priority": "high",
+    "status": "in_progress",
+    "tags": [],
+    "metadata": {
+      "source": "phone",
+      "device_type": "desktop"
+    }
+  },
+  {
+    "customer_id": "CUST-1119",
+    "customer_email": "dana.wong119@example.com",
+    "customer_name": "Dana Wong",
+    "subject": "Overcharged this month",
+    "description": "I was charged twice on my latest invoice and would like a refund for the extra payment.",
+    "category": "billing_question",
+    "priority": "urgent",
+    "status": "closed",
+    "tags": [],
+    "metadata": {
+      "source": "chat",
+      "device_type": "tablet"
+    }
+  }
+]

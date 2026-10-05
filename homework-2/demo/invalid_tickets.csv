@@ -1,0 +1,3 @@
+customer_id,customer_email,customer_name,subject,description,category,priority
+CUST-X,bademail,No Email,Bad row,short,other,low
+CUST-Y,y@example.com,Enum Bad,Valid subject here,This description is definitely long enough to pass.,nonsense,huge

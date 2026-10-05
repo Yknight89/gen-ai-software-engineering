@@ -1,0 +1,51 @@
+customer_id,customer_email,customer_name,subject,description,category,priority,status,tags,source,device_type
+CUST-1000,carl.doe0@example.com,Carl Doe,Just saying hello,I just had a general question about the product roadmap and wanted to share some feedback.,other,medium,in_progress,,email,tablet
+CUST-1001,ravi.lee1@example.com,Ravi Lee,Locked out after 2FA,"I cannot access my account after a password reset and I am locked out, this is blocking me.",account_access,low,new,,web_form,desktop
+CUST-1002,pia.cruz2@example.com,Pia Cruz,Refund for double charge,I was charged twice on my latest invoice and would like a refund for the extra payment.,billing_question,high,closed,backend,chat,tablet
+CUST-1003,jane.ng3@example.com,Jane Ng,Page is very slow,The application crashes with a 500 error and the dashboard is extremely slow to load.,technical_issue,low,waiting_customer,backend,email,mobile
+CUST-1004,ann.vega4@example.com,Ann Vega,Cannot log in to my account,"I cannot access my account after a password reset and I am locked out, this is blocking me.",account_access,medium,waiting_customer,urgent;ui,chat,tablet
+CUST-1005,leo.lee5@example.com,Leo Lee,Locked out after 2FA,"I cannot access my account after a password reset and I am locked out, this is blocking me.",account_access,medium,closed,mobile,email,tablet
+CUST-1006,bob.park6@example.com,Bob Park,Password reset not working,"I cannot access my account after a password reset and I am locked out, this is blocking me.",account_access,urgent,in_progress,,chat,mobile
+CUST-1007,kim.ng7@example.com,Kim Ng,Export to PDF idea,It would be a nice enhancement if you could please add this feature to improve the product.,feature_request,medium,in_progress,urgent;ui,phone,tablet
+CUST-1008,ravi.park8@example.com,Ravi Park,Refund for double charge,I was charged twice on my latest invoice and would like a refund for the extra payment.,billing_question,low,resolved,refund,phone,desktop
+CUST-1009,jo.doe9@example.com,Jo Doe,General question,I just had a general question about the product roadmap and wanted to share some feedback.,other,urgent,waiting_customer,urgent,web_form,desktop
+CUST-1010,jo.park10@example.com,Jo Park,Steps to reproduce a crash,"Here are the steps to reproduce a clear defect: the totals are wrong, this looks like a bug.",bug_report,low,resolved,vip;backend,api,desktop
+CUST-1011,ravi.ali11@example.com,Ravi Ali,Invoice question,I was charged twice on my latest invoice and would like a refund for the extra payment.,billing_question,low,closed,urgent,email,desktop
+CUST-1012,ola.lee12@example.com,Ola Lee,Bug: totals are wrong,"Here are the steps to reproduce a clear defect: the totals are wrong, this looks like a bug.",bug_report,urgent,in_progress,backend;vip,phone,desktop
+CUST-1013,leo.cruz13@example.com,Leo Cruz,Export to PDF idea,It would be a nice enhancement if you could please add this feature to improve the product.,feature_request,medium,closed,,web_form,tablet
+CUST-1014,hana.sun14@example.com,Hana Sun,Bug: totals are wrong,"Here are the steps to reproduce a clear defect: the totals are wrong, this looks like a bug.",bug_report,medium,resolved,,chat,desktop
+CUST-1015,hana.ali15@example.com,Hana Ali,General question,I just had a general question about the product roadmap and wanted to share some feedback.,other,urgent,waiting_customer,mobile;refund,email,desktop
+CUST-1016,ed.ali16@example.com,Ed Ali,Page is very slow,The application crashes with a 500 error and the dashboard is extremely slow to load.,technical_issue,urgent,closed,vip,web_form,desktop
+CUST-1017,ivan.park17@example.com,Ivan Park,App crashes on startup,The application crashes with a 500 error and the dashboard is extremely slow to load.,technical_issue,high,closed,,web_form,tablet
+CUST-1018,ann.ali18@example.com,Ann Ali,Please add dark mode,It would be a nice enhancement if you could please add this feature to improve the product.,feature_request,high,resolved,backend;urgent,phone,tablet
+CUST-1019,fay.ali19@example.com,Fay Ali,Suggestion for filters,It would be a nice enhancement if you could please add this feature to improve the product.,feature_request,high,waiting_customer,refund,api,mobile
+CUST-1020,ned.lee20@example.com,Ned Lee,Bug: totals are wrong,"Here are the steps to reproduce a clear defect: the totals are wrong, this looks like a bug.",bug_report,high,new,ui,phone,tablet
+CUST-1021,sam.park21@example.com,Sam Park,Refund for double charge,I was charged twice on my latest invoice and would like a refund for the extra payment.,billing_question,urgent,new,,web_form,desktop
+CUST-1022,ann.ali22@example.com,Ann Ali,App crashes on startup,The application crashes with a 500 error and the dashboard is extremely slow to load.,technical_issue,medium,resolved,,phone,desktop
+CUST-1023,sam.cruz23@example.com,Sam Cruz,Feedback for the team,I just had a general question about the product roadmap and wanted to share some feedback.,other,high,resolved,backend,web_form,desktop
+CUST-1024,mona.sun24@example.com,Mona Sun,Feedback for the team,I just had a general question about the product roadmap and wanted to share some feedback.,other,low,resolved,ui;refund,web_form,mobile
+CUST-1025,jo.lee25@example.com,Jo Lee,General question,I just had a general question about the product roadmap and wanted to share some feedback.,other,high,in_progress,vip;backend,chat,desktop
+CUST-1026,ned.park26@example.com,Ned Park,App crashes on startup,The application crashes with a 500 error and the dashboard is extremely slow to load.,technical_issue,low,closed,,web_form,tablet
+CUST-1027,jane.lee27@example.com,Jane Lee,Bug: totals are wrong,"Here are the steps to reproduce a clear defect: the totals are wrong, this looks like a bug.",bug_report,high,resolved,vip,email,mobile
+CUST-1028,ed.vega28@example.com,Ed Vega,Cannot log in to my account,"I cannot access my account after a password reset and I am locked out, this is blocking me.",account_access,low,waiting_customer,urgent,chat,tablet
+CUST-1029,ravi.wong29@example.com,Ravi Wong,General question,I just had a general question about the product roadmap and wanted to share some feedback.,other,high,waiting_customer,,web_form,tablet
+CUST-1030,ravi.doe30@example.com,Ravi Doe,Just saying hello,I just had a general question about the product roadmap and wanted to share some feedback.,other,medium,new,,phone,mobile
+CUST-1031,pia.ng31@example.com,Pia Ng,Bug: totals are wrong,"Here are the steps to reproduce a clear defect: the totals are wrong, this looks like a bug.",bug_report,urgent,in_progress,,phone,desktop
+CUST-1032,gil.vega32@example.com,Gil Vega,General question,I just had a general question about the product roadmap and wanted to share some feedback.,other,high,closed,ui;mobile,web_form,mobile
+CUST-1033,sam.cruz33@example.com,Sam Cruz,Just saying hello,I just had a general question about the product roadmap and wanted to share some feedback.,other,medium,waiting_customer,,api,desktop
+CUST-1034,leo.ng34@example.com,Leo Ng,Page is very slow,The application crashes with a 500 error and the dashboard is extremely slow to load.,technical_issue,medium,resolved,ui,web_form,mobile
+CUST-1035,sam.lee35@example.com,Sam Lee,Bug: totals are wrong,"Here are the steps to reproduce a clear defect: the totals are wrong, this looks like a bug.",bug_report,high,closed,backend,api,desktop
+CUST-1036,kim.rao36@example.com,Kim Rao,Refund for double charge,I was charged twice on my latest invoice and would like a refund for the extra payment.,billing_question,low,closed,urgent;mobile,phone,desktop
+CUST-1037,ravi.rao37@example.com,Ravi Rao,Just saying hello,I just had a general question about the product roadmap and wanted to share some feedback.,other,urgent,in_progress,ui,web_form,tablet
+CUST-1038,dana.rao38@example.com,Dana Rao,Defect in report export,"Here are the steps to reproduce a clear defect: the totals are wrong, this looks like a bug.",bug_report,high,waiting_customer,,api,tablet
+CUST-1039,hana.doe39@example.com,Hana Doe,Please add dark mode,It would be a nice enhancement if you could please add this feature to improve the product.,feature_request,low,waiting_customer,,web_form,mobile
+CUST-1040,hana.ng40@example.com,Hana Ng,Overcharged this month,I was charged twice on my latest invoice and would like a refund for the extra payment.,billing_question,low,closed,vip;mobile,web_form,desktop
+CUST-1041,dana.ali41@example.com,Dana Ali,Cannot log in to my account,"I cannot access my account after a password reset and I am locked out, this is blocking me.",account_access,medium,closed,backend;vip,email,desktop
+CUST-1042,kim.doe42@example.com,Kim Doe,500 error on dashboard,The application crashes with a 500 error and the dashboard is extremely slow to load.,technical_issue,high,in_progress,ui;urgent,phone,mobile
+CUST-1043,dana.park43@example.com,Dana Park,Bug: totals are wrong,"Here are the steps to reproduce a clear defect: the totals are wrong, this looks like a bug.",bug_report,high,resolved,,email,tablet
+CUST-1044,mona.park44@example.com,Mona Park,500 error on dashboard,The application crashes with a 500 error and the dashboard is extremely slow to load.,technical_issue,high,new,ui,chat,desktop
+CUST-1045,ned.sun45@example.com,Ned Sun,Invoice question,I was charged twice on my latest invoice and would like a refund for the extra payment.,billing_question,high,in_progress,,email,mobile
+CUST-1046,hana.lee46@example.com,Hana Lee,500 error on dashboard,The application crashes with a 500 error and the dashboard is extremely slow to load.,technical_issue,medium,closed,refund,phone,mobile
+CUST-1047,carl.rao47@example.com,Carl Rao,Cannot log in to my account,"I cannot access my account after a password reset and I am locked out, this is blocking me.",account_access,medium,new,,phone,mobile
+CUST-1048,jo.vega48@example.com,Jo Vega,Page is very slow,The application crashes with a 500 error and the dashboard is extremely slow to load.,technical_issue,urgent,resolved,backend;urgent,web_form,tablet
+CUST-1049,jane.ali49@example.com,Jane Ali,Suggestion for filters,It would be a nice enhancement if you could please add this feature to improve the product.,feature_request,high,waiting_customer,ui,api,tablet
